@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Ajouter Intervention</title></head>
+<body>
+<h1>Nouvelle intervention</h1>
+<form th:action="@{/add}" th:object="${intervention}" method="post">
+  <label>Demandeur: <input type="text" th:field="*{demandeur}" /></label><br>
+  <label>Description: <input type="text" th:field="*{description}" /></label><br>
+  <input type="hidden" th:field="*{dateDemande}" />
+  <button type="submit">Enregistrer</button>
+</form>
+</body>
+</html>

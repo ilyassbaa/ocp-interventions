@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Interventions</title></head>
+<body>
+<h1>Liste des interventions</h1>
+<a href="/add">Ajouter une intervention</a>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Date Demande</th>
+        <th>Demandeur</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="i : ${interventions}">
+        <td th:text="${i.id}"></td>
+        <td th:text="${i.dateDemande}"></td>
+        <td th:text="${i.demandeur}"></td>
+        <td th:text="${i.description}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
